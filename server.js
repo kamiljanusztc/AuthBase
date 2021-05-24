@@ -25,15 +25,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, '/public')));
 
-// app.get('/', function(req, res) {
-//   // if the request has the user object, go to the user page
-//   if (req.user) {
-//       res.redirect("/user/" + req.user._id);
-//   }
-
-//   res.redirect("/user/no-permission");
-// }
-
 app.get('/', (req, res) => {
   res.render('index');
 });
